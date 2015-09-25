@@ -6,7 +6,6 @@ class RoutesController < ApplicationController
   end
 
   def show
-
   end
 
   def new
@@ -23,7 +22,6 @@ class RoutesController < ApplicationController
   end
 
   def edit
-
   end
 
   def update
@@ -36,7 +34,7 @@ class RoutesController < ApplicationController
 
   def destroy
     @route.destroy
-    redirect_to routes_url,notice: 'Route was successfully destroyed.'
+    redirect_to routes_url, notice: 'Route was successfully destroyed.'
   end
 
   private
