@@ -1,5 +1,5 @@
 class RoutesController < ApplicationController
-  before_action :set_route, only: [:show, :edit, :update]
+  before_action :set_route, only: [:show, :edit, :update, :destroy]
 
   def index
     @routes = Route.all
@@ -32,6 +32,11 @@ class RoutesController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @route.destroy
+    redirect_to routes_url,notice: 'Route was successfully destroyed.'
   end
 
   private
